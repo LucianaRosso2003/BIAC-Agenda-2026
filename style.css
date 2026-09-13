@@ -1,0 +1,1394 @@
+/* =====================================================
+   BIAC 2026 — AGENDA
+   Estilos generales
+   ===================================================== */
+
+
+/* =====================================================
+   VARIABLES DE DISEÑO
+   ===================================================== */
+
+:root {
+    --azul: #28aee4;
+    --celeste: #48bff0;
+    --azul-profundo: #2455d6;
+    --violeta: #6535d9;
+    --magenta: #e91bb5;
+    --rosa: #f04fc5;
+
+    --fondo: #f8f9fc;
+    --blanco: #ffffff;
+
+    --texto: #17152b;
+    --texto-suave: #66667a;
+
+    --verde: #35a853;
+    --rojo: #e74c3c;
+    --naranja: #f39c12;
+
+    --radio: 14px;
+}
+
+
+/* =====================================================
+   RESET
+   ===================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   ENCABEZADO / HERO
+   ===================================================== */
+
+.hero {
+    position: relative;
+
+    min-height: 560px;
+
+    background-image: url("images/fondo.png");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+
+
+/* Textura visual */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        radial-gradient(
+            rgba(255, 255, 255, 0.15) 1px,
+            transparent 1px
+        );
+
+    background-size: 5px 5px;
+
+    opacity: 0.35;
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   NAVBAR
+   ===================================================== */
+
+.navbar {
+    position: absolute;
+
+    top: 25px;
+    left: 0;
+
+    padding: 35px 55px;
+
+    z-index: 10;
+}
+
+
+/* Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo span {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.logo small {
+    font-size: 12px;
+    line-height: 1.15;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+/* Menú */
+
+.menu {
+    display: flex;
+    gap: 35px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    transition: opacity 0.2s;
+}
+
+.menu a:hover {
+    opacity: 0.7;
+}
+
+
+/* =====================================================
+   LOGO DE LA BIENAL
+   ===================================================== */
+
+.hero-logo {
+    position: absolute;
+
+    left: 40px;
+    top: 35px;
+
+    z-index: 5;
+}
+
+.hero-logo img {
+    display: block;
+
+    width: 400px;
+    height: auto;
+}
+
+
+/* =====================================================
+   HERO CONTENT
+   ===================================================== */
+
+.hero-content {
+    position: absolute;
+
+    left: 55px;
+    bottom: 70px;
+
+    z-index: 5;
+}
+
+.hero-content h1 {
+    margin: 0;
+
+    color: white;
+
+    font-size: 7rem;
+    line-height: 0.95;
+    font-weight: 700;
+}
+
+.hero-content p {
+    margin: 22px 0 0;
+
+    color: white;
+
+    font-size: 1rem;
+    line-height: 1.5;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   CONTENIDO PRINCIPAL
+   ===================================================== */
+
+main {
+    width: 92%;
+    max-width: 1400px;
+
+    margin: -45px auto 80px;
+
+    position: relative;
+    z-index: 3;
+}
+
+
+/* =====================================================
+   DÍAS
+   ===================================================== */
+
+.dias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    background: white;
+
+    border-radius: var(--radio);
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 30px rgba(40, 50, 100, 0.12);
+
+    margin-bottom: 45px;
+}
+
+.dia {
+    border: none;
+
+    background: white;
+
+    padding: 25px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    color: var(--violeta);
+
+    border-right: 1px solid #e8e8ef;
+
+    transition: all 0.25s;
+}
+
+.dia:last-child {
+    border-right: none;
+}
+
+.dia strong {
+    display: block;
+
+    font-size: 20px;
+
+    margin-bottom: 5px;
+}
+
+.dia span {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.dia:hover {
+    background: #f3f1ff;
+}
+
+.dia.activo {
+    color: white;
+
+    background:
+        linear-gradient(
+            100deg,
+            var(--azul),
+            var(--magenta)
+        );
+}
+
+
+/* =====================================================
+   FILTROS
+   ===================================================== */
+
+.filtros {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: var(--radio);
+
+    margin-bottom: 50px;
+
+    box-shadow:
+        0 5px 20px rgba(30, 30, 80, 0.06);
+}
+
+.filtro-grupo {
+    margin-bottom: 24px;
+}
+
+.filtro-grupo:last-child {
+    margin-bottom: 0;
+}
+
+.filtro-grupo h3 {
+    font-size: 13px;
+
+    color: var(--violeta);
+
+    margin-bottom: 12px;
+
+    letter-spacing: 0.5px;
+}
+
+.botones-filtro {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+.filtro {
+    border: 1px solid #c9baf5;
+
+    background: white;
+
+    color: var(--violeta);
+
+    padding: 10px 18px;
+
+    border-radius: 30px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: all 0.2s;
+}
+
+.filtro:hover {
+    background: #f1edff;
+}
+
+.filtro.activo {
+    color: white;
+
+    border-color: transparent;
+
+    background:
+        linear-gradient(
+            100deg,
+            var(--azul),
+            var(--magenta)
+        );
+}
+
+
+/* =====================================================
+   FILTROS DE ESTADO
+   ===================================================== */
+
+.filtro.confirmado {
+    color: var(--verde);
+    border-color: #a8dfb4;
+}
+
+.filtro.cancelado {
+    color: var(--rojo);
+    border-color: #f3aaa3;
+}
+
+.filtro.reprogramado {
+    color: var(--naranja);
+    border-color: #f5ca85;
+}
+
+
+/* Estados seleccionados */
+
+.filtro.confirmado.activo {
+    background: var(--verde);
+
+    color: white;
+
+    border-color: var(--verde);
+}
+
+.filtro.cancelado.activo {
+    background: var(--rojo);
+
+    color: white;
+
+    border-color: var(--rojo);
+}
+
+.filtro.reprogramado.activo {
+    background: var(--naranja);
+
+    color: white;
+
+    border-color: var(--naranja);
+}
+
+
+/* =====================================================
+   PROGRAMA
+   ===================================================== */
+
+.programa h2 {
+    font-size: 28px;
+
+    color: var(--violeta);
+
+    margin-bottom: 25px;
+}
+
+/* =====================================================
+   TARJETA DE ACTIVIDAD
+   ===================================================== */
+
+.actividad {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr) 390px;
+    gap: 25px;
+
+    background: var(--blanco);
+    border-radius: var(--radio);
+
+    padding: 24px 28px;
+
+    margin-bottom: 18px;
+
+    border-left: 6px solid var(--azul);
+
+    box-shadow: 0 10px 30px rgba(40, 50, 100, 0.08);
+
+    align-items: stretch;
+}
+
+
+/* =====================================================
+   HORARIO
+   ===================================================== */
+
+.horario {
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 4px;
+}
+
+.horario .inicio {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--azul-profundo);
+    line-height: 1.1;
+}
+
+.horario .fin {
+    margin-top: 10px;
+
+    font-size: 1.35rem;
+    font-weight: 600;
+
+    color: #85869a;
+}
+
+
+/* =====================================================
+   INFORMACIÓN DE LA ACTIVIDAD
+   ===================================================== */
+
+.actividad-info {
+    min-width: 0;
+}
+
+.actividad-info .tipo {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--violeta);
+
+    font-size: 0.85rem;
+    font-weight: 800;
+}
+
+.actividad-info h3 {
+    margin: 0 0 12px;
+
+    color: var(--texto);
+
+    font-size: 1.65rem;
+    line-height: 1.2;
+}
+
+.tematica {
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    border-radius: 7px;
+
+    background: #e8f3ff;
+
+    color: var(--azul-profundo);
+
+    font-size: 0.95rem;
+    font-weight: 800;
+}
+
+.descripcion {
+    margin: 18px 0 0;
+
+    color: #555;
+
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   SEDE
+   ===================================================== */
+
+.sede {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin: 18px 0 0;
+
+    font-size: 0.95rem;
+}
+
+.sede > span {
+    font-weight: 800;
+    color: var(--texto);
+}
+
+.sede-btn {
+    border: none;
+    border-radius: 7px;
+
+    padding: 8px 14px;
+
+    background: #495677;
+    color: #eef2ff;
+
+    font: inherit;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.sede-btn:hover {
+    background: #18228e;
+}
+
+
+/* =====================================================
+   EXPOSITOR
+   ===================================================== */
+
+.presentador {
+    display: grid;
+
+    grid-template-columns: 100px minmax(0, 1fr);
+
+    grid-template-rows: auto 1fr auto;
+
+    column-gap: 16px;
+
+    align-items: start;
+
+    min-width: 0;
+}
+
+.foto-presentador {
+    width: 100px;
+    height: 100px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    filter: grayscale(100%);
+
+    flex-shrink: 0;
+
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.presentador-datos {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    padding-top: 8px;
+
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.presentador-datos strong {
+    color: var(--texto);
+
+    font-size: 1rem;
+    line-height: 1.35;
+}
+
+.presentador-datos span {
+    color: #777;
+
+    font-size: 0.9rem;
+}
+
+
+/* =====================================================
+   ESTADO + OPINIONES
+   ===================================================== */
+
+.actividad-acciones {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+
+    grid-column: 1 / -1;
+    grid-row: 3;
+
+    margin-top: 15px;
+}
+
+.estado {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 9px 18px;
+
+    border-radius: 22px;
+
+    font-size: 0.85rem;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+
+/* CONFIRMADA */
+
+.estado-confirmada {
+    color: var(--verde);
+
+    background: #eaf8ee;
+
+    border: 1px solid #a8dfb4;
+}
+
+
+/* CANCELADA */
+
+.estado-cancelada {
+    color: var(--rojo);
+
+    background: #fff0ee;
+
+    border: 1px solid #f3aaa3;
+}
+
+
+/* REPROGRAMADA */
+
+.estado-reprogramada {
+    color: var(--naranja);
+
+    background: #fff7e8;
+
+    border: 1px solid #f5ca85;
+}
+
+
+/* BOTÓN OPINIONES */
+
+.actividad-acciones .opinion-btn {
+    margin-top: 0;
+
+    padding: 9px 18px;
+
+    border: 2px solid var(--magenta);
+
+    border-radius: 22px;
+
+    background: transparent;
+
+    color: var(--magenta);
+
+    font: inherit;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.actividad-acciones .opinion-btn:hover {
+    background: var(--magenta);
+    color: white;
+}
+
+/* =====================================================
+   BOTÓN OPINIONES
+   ===================================================== */
+
+.opinion-btn {
+    margin-top: 20px;
+
+    padding: 9px 18px;
+
+    border: 2px solid #e91bb5;
+
+    border-radius: 20px;
+
+    background: transparent;
+
+    color: #e91bb5;
+
+    font-size: 0.8rem;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.opinion-btn:hover {
+    background: #e91bb5;
+
+    color: white;
+}
+
+
+/* =====================================================
+   OPINIONES
+   ===================================================== */
+
+.opiniones {
+    margin-top: 70px;
+}
+
+.opiniones-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.opiniones-header h2 {
+    color: var(--violeta);
+
+    font-size: 22px;
+}
+
+.opiniones-lista {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.opinion {
+    background: white;
+
+    padding: 22px;
+
+    border-radius: var(--radio);
+
+    box-shadow:
+        0 5px 20px rgba(30, 30, 80, 0.06);
+}
+
+.opinion strong {
+    color: var(--violeta);
+
+    font-size: 14px;
+}
+
+.opinion span {
+    color: #999;
+
+    font-size: 11px;
+
+    margin-left: 8px;
+}
+
+.opinion p {
+    margin-top: 15px;
+
+    font-size: 14px;
+
+    color: #444;
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+footer {
+    padding: 45px 8%;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            110deg,
+            var(--azul-profundo),
+            var(--magenta),
+            var(--celeste)
+        );
+}
+
+footer strong {
+    font-size: 24px;
+}
+
+footer p {
+    margin-top: 8px;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   MODAL DE SEDES
+   ===================================================== */
+
+.sede-modal {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 1000;
+}
+
+.sede-modal-contenido {
+    position: relative;
+
+    background: white;
+
+    width: min(500px, 90%);
+
+    padding: 35px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.sede-modal-cerrar {
+    position: absolute;
+
+    top: 12px;
+    right: 16px;
+
+    border: none;
+
+    background: none;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+.sede-modal-etiqueta {
+    color: #e6007e;
+
+    font-size: 0.8rem;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+.sede-modal h2 {
+    margin: 8px 0 20px;
+}
+
+.sede-direccion {
+    font-weight: bold;
+
+    color: #174a5b;
+}
+
+.sede-descripcion {
+    line-height: 1.5;
+
+    color: #555;
+}
+
+.mapa-btn {
+    margin-top: 15px;
+
+    padding: 9px 16px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #3236a1;
+
+    color: #eff3f4;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.mapa-btn:hover {
+    background: #28aee4;
+}
+
+.sede-modal-imagen {
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =====================================================
+   RESPONSIVE — TABLET
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .hero {
+        min-height: 450px;
+    }
+
+    .hero-content h1 {
+        font-size: 5.5rem;
+    }
+
+    main {
+        width: 94%;
+    }
+
+
+    /* Tarjetas */
+
+    .actividad {
+        grid-template-columns: 100px 1fr;
+        grid-template-rows: auto auto auto;
+
+        gap: 22px;
+    }
+
+    /* Horario */
+
+    .horario {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    /* Información */
+
+    .actividad-info {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    /* Expositor */
+
+    .presentador {
+        grid-column: 2;
+        grid-row: 2;
+
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+        justify-content: flex-start;
+
+        gap: 14px;
+
+        margin-top: 0;
+        padding-left: 0;
+
+        text-align: left;
+    }
+
+    .presentador-datos {
+        align-items: flex-start;
+    }
+
+    .foto-presentador {
+        width: 90px;
+        height: 90px;
+    }
+
+    /* Acciones */
+
+    .actividad-acciones {
+        grid-column: 1 / -1;
+        grid-row: 3;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        width: 100%;
+        gap: 15px;
+
+        margin-top: 5px;
+    }
+
+    .actividad .opinion-btn {
+        margin-top: 0;
+
+        width: auto;
+    }
+
+    /* Opiniones */
+
+    .opiniones-lista {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE — CELULAR
+   ===================================================== */
+
+@media (max-width: 650px) {
+
+
+    /* -------------------------------------------------
+       HERO
+       ------------------------------------------------- */
+
+    .hero {
+        min-height: 430px;
+    }
+
+    .navbar {
+        padding: 20px 25px;
+    }
+
+    .hero-content {
+        left: 25px;
+
+        right: 25px;
+
+        bottom: 45px;
+    }
+
+    .hero-content h1 {
+        font-size: 4rem;
+
+        letter-spacing: -2px;
+    }
+
+    .hero-content p {
+        font-size: 0.85rem;
+
+        margin-top: 15px;
+    }
+    .hero-logo img {
+    width: 80%;
+    max-width: 320px;
+    height: auto;
+    object-fit: contain;
+    }
+
+
+    /* -------------------------------------------------
+       CONTENIDO PRINCIPAL
+       ------------------------------------------------- */
+
+    main {
+        width: 94%;
+
+        margin-top: -30px;
+    }
+
+
+    /* -------------------------------------------------
+       DÍAS
+       ------------------------------------------------- */
+
+    .dias {
+        grid-template-columns: 1fr;
+    }
+
+    .dia {
+        border-right: none;
+
+        border-bottom: 1px solid #eee;
+
+        padding: 18px 20px;
+    }
+
+    .dia:last-child {
+        border-bottom: none;
+    }
+
+
+    /* -------------------------------------------------
+       FILTROS
+       ------------------------------------------------- */
+
+    
+
+    .filtros {
+        gap: 20px;
+    }
+
+    .filtro-grupo {
+        width: 100%;
+    }
+
+    .botones-filtro {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .filtro {
+        padding: 9px 13px;
+        font-size: 11px;
+        white-space: nowrap;
+    }
+
+
+    /* -------------------------------------------------
+       TÍTULO DEL DÍA
+       ------------------------------------------------- */
+
+    .programa h2 {
+        font-size: 22px;
+    }
+
+
+    /* -------------------------------------------------
+       TARJETAS
+       ------------------------------------------------- */
+
+    .actividad {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        grid-template-rows: auto auto auto auto;
+
+        gap: 16px;
+
+        padding: 20px;
+
+        border-left-width: 5px;
+    }
+
+
+    /* -------------------------------------------------
+       HORARIO
+       ------------------------------------------------- */
+
+    .horario {
+        grid-column: 1;
+        grid-row: 1;
+
+        display: flex;
+        align-items: baseline;
+        gap: 8px;
+    }
+
+    .horario .inicio {
+        font-size: 21px;
+    }
+
+    .horario .fin {
+        font-size: 15px;
+    }
+
+
+    /* -------------------------------------------------
+       INFORMACIÓN
+       ------------------------------------------------- */
+
+    .actividad-info {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .actividad-info h3 {
+        font-size: 19px;
+
+        line-height: 1.25;
+    }
+
+    .actividad-info .tipo {
+        font-size: 10px;
+    }
+
+    .descripcion {
+        max-width: none;
+    }
+
+
+    /* -------------------------------------------------
+       EXPOSITOR
+       ------------------------------------------------- */
+
+    .presentador {
+        grid-column: 1;
+        grid-row: 3;
+
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+
+        gap: 12px;
+
+        margin-top: 5px;
+        padding: 0;
+
+        text-align: left;
+    }
+
+    .foto-presentador {
+        width: 75px;
+
+        height: 75px;
+    }
+
+    .presentador-datos {
+        align-items: flex-start;
+    }
+
+    .presentador-datos strong {
+        font-size: 14px;
+    }
+
+    .presentador-datos span {
+        font-size: 12px;
+    }
+
+
+    /* -------------------------------------------------
+       SEDE
+       ------------------------------------------------- */
+
+    .sede {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        gap: 6px;
+
+        margin-top: 16px;
+
+        font-size: 0.85rem;
+    }
+
+    .sede-btn {
+        max-width: 100%;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+
+    /* -------------------------------------------------
+       ACCIONES
+       ------------------------------------------------- */
+
+    .actividad-acciones {
+        grid-column: 1;
+        grid-row: 4;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        width: 100%;
+
+        gap: 10px;
+
+        padding-top: 12px;
+
+        border-top: 1px solid #eeeeF3;
+    }
+
+    .estado {
+        padding: 6px 10px;
+
+        font-size: 11px;
+    }
+
+    .actividad .opinion-btn {
+        margin-top: 0;
+
+        padding: 9px 13px;
+
+        font-size: 11px;
+    }
+
+
+    /* -------------------------------------------------
+       OPINIONES
+       ------------------------------------------------- */
+
+    .opiniones {
+        margin-top: 50px;
+    }
+
+    .opiniones-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .opiniones-header .opinion-btn {
+        width: auto;
+    }
+
+    .opiniones-header h2 {
+        font-size: 20px;
+    }
+
+
+    /* -------------------------------------------------
+       MODAL
+       ------------------------------------------------- */
+
+    .sede-modal-contenido {
+        width: 92%;
+
+        padding: 25px;
+    }
+
+    .sede-modal-imagen {
+        height: 180px;
+    }
+}

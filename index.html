@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BIAC 2026 — Agenda</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+
+<header class="hero">
+
+    <!-- LOGO DE LA BIENAL -->
+
+    <div class="hero-logo">
+
+        <img 
+            src="images/logobienal2026-transparente.png" 
+            alt="Territorios del Agua — Bienal 2026"
+        >
+
+    </div>
+
+
+
+    <!-- TÍTULO DE LA PÁGINA -->
+
+    <div class="hero-content">
+
+        <h1>AGENDA</h1>
+
+        <p>
+            24 AL 26 DE SEPTIEMBRE — 2026<br>
+            CORRIENTES, ARGENTINA
+        </p>
+
+    </div>
+
+</header>
+
+    <!-- AGENDA -->
+
+    <main id="agenda">
+
+        <!-- DÍAS -->
+
+        <section class="dias">
+
+            <button class="dia activo" data-dia="24">
+                <strong>24 SEPTIEMBRE</strong>
+                <span>JUEVES</span>
+            </button>
+
+            <button class="dia" data-dia="25">
+                <strong>25 SEPTIEMBRE</strong>
+                <span>VIERNES</span>
+            </button>
+
+            <button class="dia" data-dia="26">
+                <strong>26 SEPTIEMBRE</strong>
+                <span>SÁBADO</span>
+            </button>
+
+        </section>
+
+        <section class="filtros">
+
+            <!-- TIPO DE ACTIVIDAD -->
+            <div class="filtro-grupo">
+
+                <h3>TIPO DE ACTIVIDAD</h3>
+
+                <div class="botones-filtro">
+
+                    <button class="filtro activo" data-filtro="tipo" data-valor="TODOS">
+                        TODAS
+                    </button>
+
+                    <button class="filtro" data-filtro="tipo" data-valor="CONFERENCIA">
+                        CONFERENCIAS
+                    </button>
+
+                    <button class="filtro" data-filtro="tipo" data-valor="WORKSHOP">
+                        WORKSHOPS
+                    </button>
+
+                    <button class="filtro" data-filtro="tipo" data-valor="TALLER">
+                        TALLERES
+                    </button>
+
+                    <button class="filtro" data-filtro="tipo" data-valor="MESA">
+                        MESAS
+                    </button>
+
+                    <button class="filtro" data-filtro="tipo" data-valor="EXPOSICION">
+                        EXPOSICIONES
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="filtro-grupo">
+
+                <h3>TEMÁTICA</h3>
+
+                <div class="botones-filtro">
+
+                    <button class="filtro activo" data-filtro="tematica" data-valor="TODAS">
+                        TODAS
+                    </button>
+
+                    <button class="filtro" data-filtro="tematica" data-valor="CIUDAD">
+                        CIUDAD
+                    </button>
+
+                    <button class="filtro" data-filtro="tematica" data-valor="TERRITORIO">
+                        TERRITORIO
+                    </button>
+
+                    <button class="filtro" data-filtro="tematica" data-valor="ARQUITECTURA">
+                            ARQUITECTURA
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="filtro-grupo">
+
+                <h3>ESTADO</h3>
+
+                <div class="botones-filtro">
+
+                    <button class="filtro activo" data-filtro="estado" data-valor="TODOS">
+                        TODOS
+                    </button>
+
+                    <button class="filtro confirmado" data-filtro="estado" data-valor="CONFIRMADA">
+                        CONFIRMADO
+                    </button>
+
+                    <button class="filtro cancelado" data-filtro="estado" data-valor="CANCELADA">
+                        CANCELADO
+                    </button>
+
+                    <button class="filtro reprogramado" data-filtro="estado" data-valor="REPROGRAMADA">
+                        REPROGRAMADO
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ACTIVIDADES -->
+
+        <section class="programa">
+
+            <h2 id="titulo-dia">24 SEPTIEMBRE — JUEVES</h2>
+
+            <div id="actividades">
+
+                <!-- JavaScript colocará las actividades acá -->
+
+            </div>
+
+        </section>
+
+
+        <!-- OPINIONES -->
+
+        <section class="opiniones">
+
+            <div class="opiniones-header">
+
+                <h2>OPINIONES DE LA COMUNIDAD</h2>
+
+                <button class="opinion-btn">
+                    Haz click aquí para dejar tu opinión
+                </button>
+
+            </div>
+
+
+            <div class="opiniones-lista">
+
+                <article class="opinion">
+
+                    <strong>Anónimo</strong>
+
+                    <span>Hoy, 10:42</span>
+
+                    <p>
+                        Excelente exposición, muy clara y necesaria
+                        para pensar nuestras ciudades frente al agua.
+                    </p>
+
+                </article>
+
+
+                <article class="opinion">
+
+                    <strong>Anónimo</strong>
+
+                    <span>Hoy, 10:31</span>
+
+                    <p>
+                        Me encantó el enfoque territorial,
+                        abre nuevas preguntas para seguir investigando.
+                    </p>
+
+                </article>
+
+
+                <article class="opinion">
+
+                    <strong>Anónimo</strong>
+
+                    <span>Hoy, 10:18</span>
+
+                    <p>
+                        Muy inspirador el enfoque en comunidades
+                        y gestión del agua.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+
+    <footer>
+
+        <strong>Territorios del agua</strong>
+
+        <p>
+            2da Bienal Internacional de Arquitectura,
+            Ciudad y Territorio en el NEA
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
