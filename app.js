@@ -282,8 +282,11 @@ function mostrarActividades() {
             </div>
 
             <div class="actividad-info">
+
                 <span class="tipo">${actividad.tipo}</span>
+
                 <h3>${actividad.titulo}</h3>
+
                 <span class="tematica">${actividad.tematica}</span>
 
                 <p class="descripcion">
@@ -296,10 +299,13 @@ function mostrarActividades() {
                         ${actividad.sede}
                     </button>
                 </p>
+
             </div>
 
             <div class="presentador">
+
                 <div class="presentador-principal">
+
                     <img
                         src="${actividad.foto}"
                         alt="${actividad.presentador}"
@@ -310,17 +316,24 @@ function mostrarActividades() {
                         <strong>${actividad.presentador}</strong>
                         <span>${actividad.profesion}</span>
                     </div>
+
                 </div>
 
                 <div class="actividad-acciones">
-                    <span class="estado estado-${actividad.estado.toLowerCase()}">
+
+                    <span class="
+                        estado
+                        estado-${actividad.estado.toLowerCase()}
+                    ">
                         ${actividad.estado}
                     </span>
 
                     <button class="opinion-btn">
                         OPINIONES
                     </button>
+
                 </div>
+
             </div>
         `;
 
